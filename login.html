@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PWIOI Memories - Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/assets/css/variables.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/navbar.css">
+  <link rel="stylesheet" href="/assets/css/hero.css">
+  <link rel="stylesheet" href="/assets/css/cards.css">
+  <link rel="stylesheet" href="/assets/css/gallery.css">
+  <link rel="stylesheet" href="/assets/css/forms.css">
+  <link rel="stylesheet" href="/assets/css/animations.css">
+  <link rel="stylesheet" href="/assets/css/darkmode.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+  
+  <script src="/assets/js/utils.js" defer></script>
+  <script src="/assets/js/theme.js" defer></script>
+  <script src="/assets/js/loader.js" defer></script>
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+
+<section class="page active" id="page-login">
+  <div class="corkboard">
+    <div class="pinphoto pinphoto-1">
+      <div class="tape"></div>
+      <img src="https://picsum.photos/seed/loginpin1/300/220" alt="">
+      <div class="pc">Hackathon '26</div>
+    </div>
+    <div class="pinphoto pinphoto-2">
+      <div class="pin"></div>
+      <img src="https://picsum.photos/seed/loginpin2/300/220" alt="">
+      <div class="pc">Farewell '26</div>
+    </div>
+
+    <div class="loginCard">
+      <div class="tapeTop"></div>
+      <div class="loginIcon">🖼️</div>
+      <h1 class="serif">PWIOI<br>Memories</h1>
+      <p class="loginSub">Where every moment lives forever</p>
+      <div class="divider"></div>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="email">College email</label>
+          <input type="email" id="email" placeholder="yourname@pwioi.com" required>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="••••••••" required>
+        </div>
+        <button type="submit">Enter Memories →</button>
+      </form>
+      <p class="restricted">Restricted · @pwioi.com only</p>
+      <p style="margin-top: 10px; font-size: 11px; color: var(--gold); line-height: 1.4; text-align: center;">💡 <strong>Demo tip:</strong> Enter <code style="font-family: monospace; background: rgba(223, 192, 124, 0.1); padding: 2px 4px; border-radius: 3px; color: #FFF;">admin@pwioi.com</code> to log in as an administrator to publish Achievements!</p>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('loginForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const email = document.getElementById('email').value.trim();
+      
+      if (!email.toLowerCase().endsWith('@pwioi.com')) {
+        showToast("Access restricted to @pwioi.com email addresses only.");
+        return;
+      }
+
+      const prefix = email.split('@')[0];
+      const name = prefix.charAt(0).toUpperCase() + prefix.slice(1);
+      const isAdmin = email.toLowerCase().includes('admin');
+      
+      const user = {
+        email: email,
+        name: name,
+        role: isAdmin ? "Administrator" : "Innovator Student"
+      };
+
+      localStorage.setItem('user', JSON.stringify(user));
+      showToast(`Welcome back, ${name}! (${user.role})`);
+      
+      setTimeout(() => {
+        window.location.href = '/index.html';
+      }, 1500);
+    });
+  });
+</script>
+
+</body>
+</html>

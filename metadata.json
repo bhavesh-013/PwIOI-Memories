@@ -1,0 +1,6 @@
+{
+  "name": "PWIOI Memories",
+  "description": "A digital scrapbook and student yearbook application for celebrating student life and achievements at PW Institute of Innovation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

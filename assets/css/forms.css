@@ -1,0 +1,186 @@
+.loginCard {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 400px;
+  background: var(--card-paper);
+  border-radius: 6px;
+  padding: 44px 40px 36px;
+  box-shadow: 0 26px 60px var(--shadow);
+  text-align: center;
+}
+
+.loginCard .tapeTop {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-1deg);
+  width: 120px;
+  height: 26px;
+  background: var(--kraft-soft);
+  opacity: 0.9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);
+}
+
+.loginIcon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  margin: 6px auto 20px;
+  background: var(--kraft-soft);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+}
+
+.loginCard h1 {
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 1.15;
+  margin: 0 0 6px;
+}
+
+.loginCard .loginSub {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--ink-soft);
+  text-transform: uppercase;
+  margin: 0 0 22px;
+}
+
+.loginCard .divider {
+  border-top: 1px dashed var(--line);
+  margin: 0 0 26px;
+}
+
+.loginCard form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  text-align: left;
+}
+
+.loginCard label, .form-group label {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.loginCard input, .form-group input, .form-group select, .form-group textarea {
+  width: 100%;
+  padding: 13px 14px;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Work Sans', sans-serif;
+  font-size: 14.5px;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+.loginCard input:focus, .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+  outline: none;
+  border-color: var(--kraft);
+  background: var(--bg-alt);
+}
+
+.loginCard button, .submitBtn {
+  margin-top: 6px;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  background: var(--kraft);
+  color: #fff;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.loginCard button:hover, .submitBtn:hover {
+  background: var(--kraft-deep);
+}
+
+.loginCard button:active, .submitBtn:active {
+  transform: scale(0.98);
+}
+
+.loginCard .restricted {
+  margin: 22px 0 0;
+  font-size: 11.5px;
+  letter-spacing: 0.5px;
+  color: var(--ink-soft);
+}
+
+/* Upload & Profile general form layouts */
+.formContainer {
+  max-width: 650px;
+  margin: 40px auto 100px;
+  background: var(--card-paper);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 15px 35px var(--shadow);
+  position: relative;
+}
+
+.formContainer .tapeTop {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(1deg);
+  width: 140px;
+  height: 24px;
+  background: var(--tape);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 22px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}
+
+.file-upload-wrapper {
+  border: 2px dashed var(--line);
+  padding: 24px;
+  border-radius: 6px;
+  text-align: center;
+  background: var(--bg);
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.file-upload-wrapper:hover {
+  border-color: var(--kraft);
+}
+
+.file-upload-wrapper input[type="file"] {
+  display: none;
+}
+
+.file-upload-text {
+  font-size: 14px;
+  color: var(--ink-soft);
+}
+
+.file-upload-text strong {
+  color: var(--kraft);
+}

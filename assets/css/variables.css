@@ -1,0 +1,40 @@
+/* Variables defined in :root are global. Every element on the page can access them.
+root select html */
+
+:root {
+  --bg: #F1E8D6;
+  --bg-alt: #FFFCF5;
+  --ink: #2A2318;
+  --ink-soft: #6E6250;
+  --line: rgba(42, 35, 24, 0.14);
+  --kraft: #8A5A2B;
+  --kraft-deep: #5E3B1B;
+  --kraft-soft: #E3D2AE;
+  --gold: #A97A24;
+  --gold-deep: #7C5A1A;
+  --gold-soft: #EFE0B8;
+  --tape: rgba(220, 196, 148, 0.75);
+  --shadow: rgba(42, 35, 24, 0.22);
+  --card-paper: #FFFDF7;
+  --plaque: #1E1A14;
+  --plaque-2: #28221A;
+}
+
+html[data-theme="dark"] {
+  --bg: #171310;
+  --bg-alt: #1F1A15;
+  --ink: #EEE3CD;
+  --ink-soft: #B3A688;
+  --line: rgba(238, 227, 205, 0.14);
+  --kraft: #D89A52;
+  --kraft-deep: #B87B36;
+  --kraft-soft: #3B301F;
+  --gold: #D8B45E;
+  --gold-deep: #B48F3F;
+  --gold-soft: #332B18;
+  --tape: rgba(90, 74, 44, 0.55);
+  --shadow: rgba(0, 0, 0, 0.55);
+  --card-paper: #241E17;
+  --plaque: #0E0C09;
+  --plaque-2: #171310;
+}

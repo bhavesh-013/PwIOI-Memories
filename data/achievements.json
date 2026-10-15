@@ -1,0 +1,134 @@
+[
+  {
+    "name": "RIFT Hackathon 2026",
+    "relatedMemoryId": "hackathon26",
+    "items": [
+      {
+        "id": "aditi-rift",
+        "name": "Aditi Sharma",
+        "award": "Winner — Best Innovative Solution",
+        "college": "PW Institute of Innovation",
+        "seed": "aditi",
+        "year": "3rd Year, Computer Science",
+        "role": "Full-Stack Developer",
+        "story": "Aditi's team spent RIFT Hackathon 2026 building a campus assistant that could answer student queries in real time. She led the backend, wiring up the database and API in under 12 hours before her team pulled the design together for the final demo.",
+        "quote": "I had never shipped anything end-to-end before this. Thirty-six hours later, we had a working product and I finally believed I could build real things.",
+        "gallery": ["aditi-g1", "aditi-g2", "aditi-g3"]
+      },
+      {
+        "id": "rohan-rift",
+        "name": "Rohan Verma",
+        "award": "Runner-up — Best UI/UX",
+        "college": "PW Institute of Innovation",
+        "seed": "rohan",
+        "year": "2nd Year, Computer Science",
+        "role": "Product Designer",
+        "story": "Rohan redesigned his team's interface twice overnight after early feedback from mentors. His final walkthrough of the user flow was what tipped the judges toward a runner-up finish.",
+        "quote": "Design feedback stings for five minutes and then makes the product better forever. Best trade I've ever made.",
+        "gallery": ["rohan-g1", "rohan-g2", "rohan-g3"]
+      },
+      {
+        "id": "elite-rift",
+        "name": "Team Elite Coders",
+        "award": "Special Mention — DBMS Track",
+        "college": "PW Institute of Innovation",
+        "seed": "elitecoders",
+        "year": "Mixed Team, 2nd–3rd Year",
+        "role": "Database & Backend Team",
+        "story": "A three-person team who optimised their query layer at 4am when the demo dataset kept timing out — and turned that fix into the feature the judges remembered most.",
+        "quote": "We almost gave up on the DB layer twice. Glad we didn't.",
+        "gallery": ["elite-g1", "elite-g2", "elite-g3"]
+      }
+    ]
+  },
+  {
+    "name": "National Coding Championship 2026",
+    "relatedMemoryId": null,
+    "items": [
+      {
+        "id": "priya-ncc",
+        "name": "Priya Nair",
+        "award": "Gold Medal — Individual Rank 1",
+        "college": "PW Institute of Innovation",
+        "seed": "priya",
+        "year": "Final Year, Computer Science",
+        "role": "Competitive Programmer",
+        "story": "Priya solved all six problems in the final round with eleven minutes to spare, capping off eight months of daily practice sessions that started with her barely clearing the qualifiers.",
+        "quote": "Rank 1 wasn't the goal on day one — just not finishing last was. Consistency did the rest.",
+        "gallery": ["priya-g1", "priya-g2", "priya-g3"]
+      },
+      {
+        "id": "karan-ncc",
+        "name": "Karan Mehta",
+        "award": "Silver Medal — Individual Rank 2",
+        "college": "PW Institute of Innovation",
+        "seed": "karan",
+        "year": "3rd Year, Computer Science",
+        "role": "Competitive Programmer",
+        "story": "Karan missed gold by a single test case, but his performance across the season made him one of the most consistent scorers PWIOI has sent to the championship.",
+        "quote": "One test case away teaches you more than winning by ten would have.",
+        "gallery": ["karan-g1", "karan-g2", "karan-g3"]
+      }
+    ]
+  },
+  {
+    "name": "Inter-College Sports Meet 2026",
+    "relatedMemoryId": "sports25",
+    "items": [
+      {
+        "id": "sameer-sports",
+        "name": "Sameer Khan",
+        "award": "Gold — 100m Sprint",
+        "college": "PW Institute of Innovation",
+        "seed": "sameer",
+        "year": "2nd Year, Mechanical Engineering",
+        "role": "Track Athlete",
+        "story": "Sameer shaved half a second off his personal best on race day, training before every lecture for four months leading up to the meet.",
+        "quote": "Nobody sees the 6am practices. They just see the ten seconds that count.",
+        "gallery": ["sameer-g1", "sameer-g2", "sameer-g3"]
+      },
+      {
+        "id": "basketball-sports",
+        "name": "Team PWIOI",
+        "award": "Champions — Basketball",
+        "college": "PW Institute of Innovation",
+        "seed": "basketball",
+        "year": "Mixed Team, All Years",
+        "role": "Basketball Team",
+        "story": "Down by eight points at half-time, the team closed the final quarter with a 14-2 run to take the championship in front of the whole campus.",
+        "quote": "We stopped playing for the scoreboard and started playing for each other. That's when it turned.",
+        "gallery": ["bball-g1", "bball-g2", "bball-g3"]
+      }
+    ]
+  },
+  {
+    "name": "Confluence — Cultural Fest 2026",
+    "relatedMemoryId": "cultural26",
+    "items": [
+      {
+        "id": "ananya-fest",
+        "name": "Ananya Singh",
+        "award": "Best Performer — Solo Dance",
+        "college": "PW Institute of Innovation",
+        "seed": "ananya",
+        "year": "1st Year, Electronics Engineering",
+        "role": "Dancer & Choreographer",
+        "story": "Ananya choreographed her own routine in three weeks between classes, performing it for the first time in front of an audience on the night of Confluence itself.",
+        "quote": "First year, first fest, first time on that stage. I'm glad I didn't wait for a \"better\" year to try.",
+        "gallery": ["ananya-g1", "ananya-g2", "ananya-g3"]
+      },
+      {
+        "id": "rhythm-fest",
+        "name": "The Rhythm Collective",
+        "award": "Winners — Battle of Bands",
+        "college": "PW Institute of Innovation",
+        "seed": "rhythm",
+        "year": "Mixed Team, 2nd–4th Year",
+        "role": "Student Band",
+        "story": "Formed just for this fest, the band rehearsed in a borrowed classroom after hours and won the Battle of Bands on their very first public performance together.",
+        "quote": "We were four strangers with instruments six weeks ago. Now we're a band with a trophy.",
+        "gallery": ["rhythm-g1", "rhythm-g2", "rhythm-g3"]
+      }
+    ]
+  }
+]

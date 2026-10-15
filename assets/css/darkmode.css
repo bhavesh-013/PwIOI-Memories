@@ -1,0 +1,210 @@
+html[data-theme="dark"] #page-login {
+  background:
+    radial-gradient(circle at 1px 1px, rgba(238, 227, 205, 0.06) 1.4px, transparent 0) 0 0/24px 24px,
+    linear-gradient(160deg, var(--kraft-soft), var(--bg) 55%);
+}
+
+html[data-theme="dark"] #page-memories {
+  background-image: radial-gradient(circle at 1px 1px, rgba(238, 227, 205, 0.05) 1px, transparent 0);
+}
+
+/* Corkboard login view aesthetics */
+#page-login {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 1px 1px, rgba(42, 35, 24, 0.07) 1.4px, transparent 0) 0 0/24px 24px,
+    linear-gradient(160deg, var(--kraft-soft), var(--bg) 55%);
+}
+
+.corkboard {
+  min-height: calc(100vh - 81px);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 24px;
+}
+
+.pinphoto {
+  position: absolute;
+  background: var(--card-paper);
+  padding: 10px 10px 34px;
+  box-shadow: 0 14px 26px var(--shadow);
+  width: 170px;
+  z-index: 1;
+}
+
+.pinphoto img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  filter: sepia(0.08) saturate(1.05);
+}
+
+.pinphoto .pc {
+  font-family: 'Caveat', cursive;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 8px;
+  color: var(--ink);
+}
+
+.pinphoto .tape {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-4deg);
+  width: 60px;
+  height: 20px;
+  background: var(--gold-soft);
+  opacity: 0.95;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.18);
+}
+
+.pinphoto .pin {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #6FA383, #3E7059);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.pinphoto-1 {
+  top: 9%;
+  right: 9%;
+  transform: rotate(5deg);
+}
+
+.pinphoto-2 {
+  bottom: 8%;
+  left: 8%;
+  transform: rotate(-6deg);
+  width: 150px;
+}
+
+/* Hall of Fame Plaque / Achievements aesthetics */
+.hof {
+  background: var(--plaque);
+  color: #EEE3CD;
+}
+
+.hof .page-head {
+  padding-top: 70px;
+}
+
+.hof .page-head .kicker {
+  color: var(--gold);
+}
+
+.hof .page-head p {
+  color: #B3A688;
+}
+
+.hof-divider {
+  width: 80px;
+  height: 2px;
+  margin: 18px auto 0;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.eventgroup {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 50px 48px;
+}
+
+.eventgroup + .eventgroup {
+  border-top: 1px solid rgba(239, 224, 160, 0.12);
+}
+
+.eventgroup h3 {
+  font-size: 14px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 26px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+}
+
+.eventgroup h3::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(239, 224, 160, 0.18);
+}
+
+.filmstrip {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: 18px 0 6px;
+  opacity: 0.5;
+}
+
+.filmstrip span {
+  width: 6px;
+  height: 6px;
+  border-radius: 1px;
+  background: var(--ink-soft);
+}
+
+/* Category Selection Chips */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 24px 48px 10px;
+}
+
+.chip {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13.5px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--bg-alt);
+  color: var(--ink-soft);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.chip.active, .chip:hover {
+  background: var(--kraft);
+  color: #fff;
+  border-color: var(--kraft);
+}
+
+/* Page titles */
+.page-head {
+  padding: 64px 48px 20px;
+  text-align: center;
+}
+
+.page-head .kicker {
+  font-family: 'Caveat', cursive;
+  color: var(--kraft);
+  font-size: 22px;
+}
+
+.page-head h1 {
+  font-size: clamp(32px, 5vw, 52px);
+  margin: 4px 0 8px;
+}
+
+.page-head p {
+  color: var(--ink-soft);
+  max-width: 520px;
+  margin: 0 auto;
+}

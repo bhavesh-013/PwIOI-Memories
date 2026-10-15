@@ -1,0 +1,46 @@
+@media (max-width: 900px) {
+  .doorways {
+    grid-template-columns: 1fr;
+  }
+  .pinphoto {
+    display: none;
+  }
+  .scrapbook {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 130px;
+    gap: 46px 20px;
+  }
+  .size-lg, .size-wide, .size-md, .size-sm, .size-tall {
+    grid-column: span 2;
+    grid-row: span 4;
+  }
+}
+
+@media (max-width: 800px) {
+  .editorialGallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .g-lg, .g-wide, .g-sm, .g-tall {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+
+@media (max-width: 700px) {
+  .adGallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  nav.topnav {
+    padding: 16px 20px;
+  }
+  .navlinks {
+    display: none;
+  }
+  .doorways, .page-head, .chips, .scrapbook, .eventgroup {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

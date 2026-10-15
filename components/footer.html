@@ -1,0 +1,150 @@
+<footer class="app-footer">
+  <div class="footer-container">
+    <!-- Left: Elegant Logo/Branding -->
+    <div class="footer-left" onclick="window.location.href='/index.html'">
+      <svg class="footer-logo-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="var(--gold)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+      </svg>
+      <span class="logo-text">
+        <span class="brand-italic">PWIOI</span><span class="brand-bold">Memories</span>
+      </span>
+    </div>
+
+    <!-- Middle: Credits in elegant matching style -->
+    <div class="footer-middle">
+      <span class="muted-text">Made By</span>
+      <span class="highlight-text">Bhavesh Kumawat</span>
+      <span class="muted-text">and</span>
+      <span class="highlight-text">Harshit Upadhyay</span>
+    </div>
+
+    <!-- Right: Org & Heart -->
+    <div class="footer-right">
+      <span class="muted-text">Built with</span>
+      <span class="heart-icon">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="var(--gold)" stroke="var(--gold)" stroke-width="1">
+          <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+        </svg>
+      </span>
+      <span class="muted-text">at</span>
+      <span class="highlight-text font-bold">PW Institute of Innovation</span>
+    </div>
+  </div>
+
+  <style>
+    /* Handcrafted Custom Scrapbook Footer */
+    .app-footer {
+      background: var(--bg-alt);
+      border-top: 1px dashed var(--line);
+      padding: 22px 40px;
+      margin-top: auto;
+      width: 100%;
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    /* Left Logo */
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .footer-logo-icon {
+      transition: transform 0.3s ease;
+    }
+    
+    .footer-left:hover .footer-logo-icon {
+      transform: rotate(15deg) scale(1.1);
+    }
+
+    .logo-text {
+      font-size: 15px;
+      color: var(--ink);
+      letter-spacing: -0.2px;
+    }
+
+    .brand-italic {
+      font-family: 'Fraunces', Georgia, serif;
+      font-style: italic;
+      font-weight: 700;
+      color: var(--kraft);
+      margin-right: 3px;
+    }
+
+    .brand-bold {
+      font-family: 'Work Sans', sans-serif;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    /* Text elements matching our website's font stack */
+    .muted-text {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 13px;
+      color: var(--ink-soft);
+      font-weight: 400;
+    }
+
+    .highlight-text {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 13px;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: -0.1px;
+    }
+
+    .font-bold {
+      font-weight: 700;
+    }
+
+    .footer-middle {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .footer-right {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .heart-icon {
+      display: flex;
+      align-items: center;
+      animation: footerHeartbeat 1.6s infinite ease-in-out;
+    }
+
+    @keyframes footerHeartbeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 800px) {
+      .app-footer {
+        padding: 20px;
+      }
+      .footer-container {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+      }
+      .footer-middle, .footer-right {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</footer>

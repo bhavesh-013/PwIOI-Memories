@@ -1,0 +1,104 @@
+<nav class="topnav">
+  <div class="brand" onclick="window.location.href='/index.html'">
+    <div class="name"><em>PWIOI</em> Memories</div>
+    <div class="tag">Where every moment lives forever</div>
+  </div>
+  <div class="navlinks">
+    <a href="/index.html" id="nav-home">Home</a>
+    <a href="/memories.html" id="nav-memories">Memories</a>
+    <a href="/achievements.html" id="nav-achievements">Achievements</a>
+    <a href="/upload.html" id="nav-upload" style="display:none;">Upload</a>
+  </div>
+  <div class="navright">
+    <!-- Recent Button -->
+    <button class="recent-btn" id="headerRecentBtn" onclick="toggleRecentDropdown(event)" title="Recent Memories">
+      <svg class="history-icon" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path>
+        <polyline points="3 3 3 8 8 8"></polyline>
+        <line x1="12" y1="7" x2="12" y2="12"></line>
+        <line x1="12" y1="12" x2="16" y2="14"></line>
+      </svg>
+      <span>Recent</span>
+    </button>
+    
+    <!-- Theme Toggle Outline Button -->
+    <button class="theme-outline-btn" onclick="toggleTheme()" id="themeIcon" title="Toggle theme">
+      <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="moon-svg">
+        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+      </svg>
+    </button>
+    
+    <!-- Profile Dropdown Container -->
+    <div class="profile-dropdown-container">
+      <button class="avatar-btn" id="headerAvatarBtn" onclick="toggleProfileDropdown(event)" title="My Account">
+        <img id="headerAvatarImg" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&h=150" alt="User Avatar">
+      </button>
+      
+      <!-- Dropdown Card -->
+      <div class="profile-dropdown-card" id="profileDropdownCard">
+        <div class="profile-header">
+          <div class="profile-header-left">
+            <img id="dropdownProfileAvatar" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&h=150" alt="Profile" class="dropdown-avatar-img">
+          </div>
+          <div class="profile-header-right">
+            <div class="profile-name-wrapper">
+              <div class="profile-name" id="dropdownProfileName">BHAVESH KUMAWAT</div>
+              <span class="profile-badge">Innovator</span>
+            </div>
+            <div class="profile-handle" id="dropdownProfileHandle">@bhavesh_kmwt</div>
+          </div>
+        </div>
+        <div class="profile-divider"></div>
+        <ul class="profile-menu">
+          <li>
+            <a href="/profile.html" class="profile-menu-item">
+              <span class="menu-icon-wrapper">
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </span>
+              <span class="menu-label">My Profile</span>
+              <span class="menu-chevron">➔</span>
+            </a>
+          </li>
+          <li>
+            <a href="/profile.html#special-section" class="profile-menu-item">
+              <span class="menu-icon-wrapper">
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                </svg>
+              </span>
+              <span class="menu-label">Special</span>
+              <span class="menu-chevron">➔</span>
+            </a>
+          </li>
+          <li class="logout-li">
+            <a href="#" class="profile-menu-item logout-item" id="dropdownLogoutBtn">
+              <span class="menu-icon-wrapper">
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path>
+                  <polyline points="16 17 21 12 16 7"></polyline>
+                  <line x1="21" y1="12" x2="9" y2="12"></line>
+                </svg>
+              </span>
+              <span class="menu-label">Log out</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Recent Memories Dropdown Card -->
+    <div class="recent-dropdown-card" id="recentDropdownCard">
+      <div class="recent-header">
+        <span>Recently Viewed</span>
+        <span style="font-size: 10px; color: var(--gold); cursor: pointer;" onclick="clearRecentMemories(event)">Clear</span>
+      </div>
+      <div class="profile-divider" style="margin: 0 -20px 12px;"></div>
+      <div class="recent-list" id="recentDropdownList">
+        <div class="recent-empty">No recently viewed memories.</div>
+      </div>
+    </div>
+  </div>
+</nav>

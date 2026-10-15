@@ -1,0 +1,130 @@
+.hero {
+  position: relative;
+  min-height: 78vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 24px 60px;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 20%, color-mix(in srgb, var(--kraft) 18%, transparent), transparent 40%),
+    radial-gradient(circle at 85% 75%, color-mix(in srgb, var(--gold) 16%, transparent), transparent 45%);
+  pointer-events: none;
+}
+
+.hero .eyebrow {
+  font-family: 'Caveat', cursive;
+  font-size: 22px;
+  color: var(--kraft);
+  margin-bottom: 6px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 6vw, 72px);
+  font-weight: 600;
+  font-style: italic;
+  max-width: 900px;
+  line-height: 1.15;
+  margin: 0 0 20px;
+}
+
+.hero p.sub {
+  color: var(--ink-soft);
+  font-size: 17px;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.doorways {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  max-width: 1100px;
+  margin: 20px auto 100px;
+  padding: 0 48px;
+}
+
+.door {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  height: 360px;
+  cursor: pointer;
+  display: flex;
+  align-items: flex-end;
+  padding: 32px;
+  box-shadow: 0 18px 40px var(--shadow);
+  transition: transform 0.35s ease;
+}
+
+.door:hover {
+  transform: translateY(-6px);
+}
+
+.door .bgimg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.6s ease;
+}
+
+.door:hover .bgimg {
+  transform: scale(1.06);
+}
+
+.door .overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.door.memories .overlay {
+  background: linear-gradient(180deg, rgba(20, 15, 8, 0) 30%, rgba(20, 15, 8, 0.85) 100%);
+}
+
+.door.achievements .overlay {
+  background: linear-gradient(180deg, rgba(10, 8, 4, 0.1) 20%, rgba(10, 8, 4, 0.92) 100%);
+}
+
+.door .content {
+  position: relative;
+  color: #F5EEDD;
+}
+
+.door .kicker {
+  font-family: 'Caveat', cursive;
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+.door h2 {
+  font-size: 34px;
+  margin: 2px 0 6px;
+  font-weight: 600;
+}
+
+.door .desc {
+  font-size: 14px;
+  opacity: 0.85;
+  max-width: 320px;
+}
+
+.door.achievements h2 {
+  color: #F3DFA0;
+}
+
+footer {
+  text-align: center;
+  padding: 40px 20px 60px;
+  color: var(--ink-soft);
+  font-size: 13px;
+  border-top: 1px solid var(--line);
+}

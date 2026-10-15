@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PWIOI Memories - Upload</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/assets/css/variables.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/navbar.css">
+  <link rel="stylesheet" href="/assets/css/hero.css">
+  <link rel="stylesheet" href="/assets/css/cards.css">
+  <link rel="stylesheet" href="/assets/css/gallery.css">
+  <link rel="stylesheet" href="/assets/css/forms.css">
+  <link rel="stylesheet" href="/assets/css/animations.css">
+  <link rel="stylesheet" href="/assets/css/darkmode.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+  
+  <script src="/assets/js/utils.js" defer></script>
+  <script src="/assets/js/theme.js" defer></script>
+  <script src="/assets/js/loader.js" defer></script>
+  <script src="/assets/js/upload.js" defer></script>
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+
+<section class="page active" id="page-upload">
+  <div class="page-head">
+    <div class="kicker">contribution desk</div>
+    <h1>Add to Yearbook</h1>
+    <p>Pin a new memory to the scrapbook or recognize a student in the Hall of Fame.</p>
+    <div class="filmstrip"><span></span><span></span><span></span><span></span></div>
+  </div>
+
+  <div class="formContainer">
+    <div class="tapeTop"></div>
+    
+    <!-- Admin Restriction Warning Banner -->
+    <div class="admin-only-badge" id="adminOnlyNotice" style="display: none; background: rgba(223, 192, 124, 0.08); border: 1px dashed var(--gold); border-radius: 8px; padding: 14px 18px; margin-bottom: 24px; font-size: 13px; color: var(--gold); line-height: 1.5;">
+      <div style="display: flex; gap: 10px; align-items: flex-start;">
+        <span style="font-size: 16px; line-height: 1;">🔒</span>
+        <div>
+          <strong>Admin Access Required:</strong> You are currently logged in as a student. Publishing to the official "Hall of Fame Achievements" is reserved for administrators. Log in with an admin account (e.g. <code style="font-family: monospace; color:#fff;">admin@pwioi.com</code>) to grant permission.
+        </div>
+      </div>
+    </div>
+
+    <form id="uploadForm">
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="upload_type">I want to add a...</label>
+          <select id="upload_type" required>
+            <option value="memory">Scrapbook Memory</option>
+            <option value="achievement" id="achievementOption">Hall of Fame Achievement</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="date">Event Date</label>
+          <input type="date" id="date" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="title">Title / Headline</label>
+        <input type="text" id="title" placeholder="e.g. Football Finals Win or Hackathon 2026 First Place" required>
+      </div>
+
+      <div class="form-group">
+        <label>Memory Image (Upload or Paste URL)</label>
+        <div class="file-upload-wrapper" id="drop-zone" style="position: relative; overflow: hidden;">
+          <input type="file" id="file-input" accept="image/*" style="display: none;">
+          <div class="file-upload-text" id="upload-status-text">
+            <strong>Click to upload</strong> or drag & drop an image here
+          </div>
+          <!-- Image preview -->
+          <div id="image-preview-container" style="display: none; margin-top: 10px; text-align: center; position: relative; z-index: 5;">
+            <img id="image-preview" src="" style="max-height: 180px; max-width: 100%; border-radius: 6px; border: 1px solid var(--line); display: inline-block;" alt="Preview">
+            <div style="margin-top: 8px;">
+              <button type="button" id="remove-preview-btn" style="background: #FF5A5A; color: #fff; border: none; border-radius: 4px; padding: 4px 10px; cursor: pointer; font-family: inherit; font-size: 12px; font-weight: 500; transition: background 0.2s;">Remove Photo</button>
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center; margin: 10px 0; color: var(--ink-soft); font-size: 11px; font-weight: 600; letter-spacing: 1px;">— OR PASTE IMAGE URL —</div>
+        <input type="url" id="cover_url" placeholder="https://picsum.photos/seed/some-seed/600/400">
+        <small style="font-size: 11px; color: var(--ink-soft); display: block; margin-top: 6px;">We recommend uploading a file. If empty, a random placeholder seed image will be picked!</small>
+      </div>
+
+      <div class="form-group">
+        <label for="story">The Story (Description)</label>
+        <textarea id="story" rows="4" placeholder="Tell us what happened, who was there, and why it's worth keeping..." required style="width: 100%; border: 1px solid var(--line); border-radius: 4px; padding: 13px; background: var(--bg); color: var(--ink); font-family: inherit; font-size: 14.5px;"></textarea>
+      </div>
+
+      <!-- Collapsible Advanced Settings for Scrapbook Memories -->
+      <div id="advanced-toggle-wrapper" style="margin-bottom: 24px;">
+        <button type="button" id="toggleAdvancedBtn" style="background: none; border: none; color: var(--kraft); cursor: pointer; font-size: 13px; font-family: 'Work Sans', sans-serif; font-weight: 600; display: flex; align-items: center; gap: 6px; padding: 0; outline: none;">
+          <span id="advancedChevron" style="display: inline-block; transition: transform 0.2s;">▶</span>
+          <span>Configure Design Options (Category, Grid size, Location)</span>
+        </button>
+        
+        <div id="advanced-fields-container" style="display: none; padding: 20px 20px 4px; border: 1px dashed var(--line); border-radius: 8px; margin-top: 14px; background: var(--bg-alt);">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="category">Category</label>
+              <select id="category">
+                <option value="freshers">Freshers</option>
+                <option value="hackathon">Hackathon</option>
+                <option value="farewell">Farewell</option>
+                <option value="sports">Sports</option>
+                <option value="industrial">Industrial Visit</option>
+                <option value="cultural">Cultural Fest</option>
+                <option value="convocation">Convocation</option>
+                <option value="trips">Trips</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="location">Location</label>
+              <input type="text" id="location" placeholder="e.g. Block C Auditorium" value="PWIOI Campus">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fastener">Fastener Accent</label>
+              <select id="fastener">
+                <option value="tape">Sticky Tape Accent</option>
+                <option value="pin">Red Pin Point Accent</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="size">Scrapbook Grid Weight (Size)</label>
+              <select id="size">
+                <option value="size-md">Medium Card (size-md)</option>
+                <option value="size-sm">Small Card (size-sm)</option>
+                <option value="size-lg">Large Frame (size-lg)</option>
+                <option value="size-wide">Horizontal Wide (size-wide)</option>
+                <option value="size-tall">Vertical Tall (size-tall)</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Specific Achievement Fields -->
+      <div id="achievement-specific-fields" style="display: none; margin-bottom: 24px;">
+        <div style="background: rgba(223, 192, 124, 0.05); border: 1px dashed rgba(223, 192, 124, 0.2); border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+          <div class="form-group">
+            <label for="award">Award/Recognition Badge Title</label>
+            <input type="text" id="award" placeholder="e.g. Winner — Best UI/UX or Gold Medalist">
+          </div>
+          
+          <div class="form-row">
+            <div class="form-group">
+              <label for="student_name">Achiever Name</label>
+              <input type="text" id="student_name" placeholder="Student or Team Name">
+            </div>
+            <div class="form-group">
+              <label for="student_role">Achiever Role</label>
+              <input type="text" id="student_role" placeholder="e.g. Competitive Programmer">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="student_year">Current Academic Year</label>
+              <select id="student_year">
+                <option value="1st Year">1st Year</option>
+                <option value="2nd Year">2nd Year</option>
+                <option value="3rd Year">3rd Year</option>
+                <option value="Final Year">Final Year</option>
+                <option value="Alumni">Alumni</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="quote">Achiever Quote</label>
+              <input type="text" id="quote" placeholder="e.g. Consistency was key.">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button type="submit" class="submitBtn">Post to digital scrapbook →</button>
+    </form>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script>
+  // Pre-populate date with today's date
+  document.getElementById('date').valueAsDate = new Date();
+</script>
+
+</body>
+</html>

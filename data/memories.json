@@ -1,0 +1,175 @@
+[
+  {
+    "id": "freshers26",
+    "cat": "freshers",
+    "size": "size-lg",
+    "featured": true,
+    "stack": true,
+    "fastener": "pin",
+    "cover": "freshers1",
+    "cap": "Freshers' Night 2026",
+    "date": "14 Aug 2026",
+    "location": "Main Auditorium, PWIOI Campus",
+    "story": "Freshers' Night 2026 marked the beginning of countless friendships, unforgettable performances, and memories that will stay with every student forever.",
+    "gallery": [
+      {"seed": "freshers1", "size": "g-lg"},
+      {"seed": "freshers1b", "size": "g-sm"},
+      {"seed": "freshers1c", "size": "g-sm"},
+      {"seed": "freshers1d", "size": "g-wide"},
+      {"seed": "freshers1e", "size": "g-tall"},
+      {"seed": "freshers1f", "size": "g-sm"}
+    ],
+    "videos": ["freshers1-v1", "freshers1-v2"]
+  },
+  {
+    "id": "hackathon26",
+    "cat": "hackathon",
+    "size": "size-wide",
+    "featured": false,
+    "stack": false,
+    "fastener": "tape",
+    "tape": ["c-kraft", "pos-l"],
+    "cover": "hackathon1",
+    "cap": "RIFT Hackathon 2026",
+    "date": "20 Sep 2026",
+    "location": "Innovation Lab, Block C",
+    "story": "36 hours, endless coffee, and a room full of half-finished ideas turning into working products — RIFT Hackathon 2026 pushed every team to build something they were proud of.",
+    "gallery": [
+      {"seed": "hackathon1", "size": "g-wide"},
+      {"seed": "hackathon1b", "size": "g-sm"},
+      {"seed": "hackathon1c", "size": "g-sm"},
+      {"seed": "hackathon1d", "size": "g-lg"},
+      {"seed": "hackathon1e", "size": "g-sm"}
+    ],
+    "videos": ["hackathon1-v1"]
+  },
+  {
+    "id": "farewell26",
+    "cat": "farewell",
+    "size": "size-md",
+    "featured": false,
+    "stack": false,
+    "fastener": "tape",
+    "tape": ["c-gold", "pos-r"],
+    "cover": "farewell1",
+    "cap": "Farewell 2026",
+    "date": "10 May 2026",
+    "location": "Rose Garden Lawns",
+    "story": "A quiet ache and a lot of laughter — Farewell 2026 was the batch's last evening together before everyone scattered into their own next chapters.",
+    "gallery": [
+      {"seed": "farewell1", "size": "g-lg"},
+      {"seed": "farewell1b", "size": "g-wide"},
+      {"seed": "farewell1c", "size": "g-sm"},
+      {"seed": "farewell1d", "size": "g-sm"},
+      {"seed": "farewell1e", "size": "g-tall"}
+    ],
+    "videos": ["farewell1-v1", "farewell1-v2"]
+  },
+  {
+    "id": "sports25",
+    "cat": "sports",
+    "size": "size-sm",
+    "featured": false,
+    "stack": false,
+    "fastener": "pin",
+    "cover": "sports1",
+    "cap": "Sports Day 2025",
+    "date": "12 Oct 2025",
+    "location": "PWIOI Sports Ground",
+    "story": "From the 100m sprint to the last-minute basketball comeback, Sports Day 2025 turned every classroom rivalry into a genuine sporting one.",
+    "gallery": [
+      {"seed": "sports1", "size": "g-lg"},
+      {"seed": "sports1b", "size": "g-sm"},
+      {"seed": "sports1c", "size": "g-sm"},
+      {"seed": "sports2", "size": "g-wide"},
+      {"seed": "sports1d", "size": "g-sm"}
+    ],
+    "videos": ["sports1-v1"]
+  },
+  {
+    "id": "indvisit26",
+    "cat": "industrial",
+    "size": "size-tall",
+    "featured": false,
+    "stack": false,
+    "fastener": "tape",
+    "tape": ["c-plain", "pos-c"],
+    "cover": "indvisit1",
+    "cap": "Industrial Visit — Neemrana",
+    "date": "18 Feb 2026",
+    "location": "Neemrana Industrial Park",
+    "story": "Textbooks met the factory floor as students toured a live manufacturing plant, watching everything they had studied actually come together at scale.",
+    "gallery": [
+      {"seed": "indvisit1", "size": "g-tall"},
+      {"seed": "indvisit1b", "size": "g-sm"},
+      {"seed": "indvisit1c", "size": "g-sm"},
+      {"seed": "indvisit1d", "size": "g-wide"}
+    ],
+    "videos": ["indvisit1-v1"]
+  },
+  {
+    "id": "cultural26",
+    "cat": "cultural",
+    "size": "size-md",
+    "featured": false,
+    "stack": false,
+    "fastener": "tape",
+    "tape": ["c-kraft", "pos-c"],
+    "cover": "fest1",
+    "cap": "Confluence — Cultural Fest 2026",
+    "date": "22 Mar 2026",
+    "location": "Open Air Theatre",
+    "story": "Three days of music, dance and colour — Confluence 2026 turned the whole campus into a stage where every club got its moment.",
+    "gallery": [
+      {"seed": "fest1", "size": "g-lg"},
+      {"seed": "fest1b", "size": "g-sm"},
+      {"seed": "fest1c", "size": "g-sm"},
+      {"seed": "fest1d", "size": "g-wide"},
+      {"seed": "fest1e", "size": "g-tall"}
+    ],
+    "videos": ["fest1-v1", "fest1-v2"]
+  },
+  {
+    "id": "convocation26",
+    "cat": "convocation",
+    "size": "size-wide",
+    "featured": false,
+    "stack": false,
+    "fastener": "tape",
+    "tape": ["c-gold", "pos-l"],
+    "cover": "convo1",
+    "cap": "Convocation Day 2026",
+    "date": "6 Jun 2026",
+    "location": "Central Auditorium",
+    "story": "Caps thrown in the air, families in the front rows, and four years of work finally handed a name — Convocation 2026 made it all feel real.",
+    "gallery": [
+      {"seed": "convo1", "size": "g-lg"},
+      {"seed": "convo1b", "size": "g-wide"},
+      {"seed": "convo1c", "size": "g-sm"},
+      {"seed": "convo1d", "size": "g-sm"}
+    ],
+    "videos": ["convo1-v1"]
+  },
+  {
+    "id": "trips25",
+    "cat": "trips",
+    "size": "size-lg",
+    "featured": false,
+    "stack": true,
+    "fastener": "tape",
+    "tape": ["c-plain", "pos-r"],
+    "cover": "trip1",
+    "cap": "Himalayan Trip 2025",
+    "date": "15 Dec 2025",
+    "location": "Manali, Himachal Pradesh",
+    "story": "Somewhere between the mountain passes and the campfire nights, this trip became the one story everyone kept retelling for the rest of the year.",
+    "gallery": [
+      {"seed": "trip1", "size": "g-lg"},
+      {"seed": "trip1b", "size": "g-tall"},
+      {"seed": "trip1c", "size": "g-sm"},
+      {"seed": "trip1d", "size": "g-sm"},
+      {"seed": "trip1e", "size": "g-wide"}
+    ],
+    "videos": ["trip1-v1", "trip1-v2"]
+  }
+]

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PWIOI Memories - Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/assets/css/variables.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/navbar.css">
+  <link rel="stylesheet" href="/assets/css/hero.css">
+  <link rel="stylesheet" href="/assets/css/cards.css">
+  <link rel="stylesheet" href="/assets/css/gallery.css">
+  <link rel="stylesheet" href="/assets/css/forms.css">
+  <link rel="stylesheet" href="/assets/css/animations.css">
+  <link rel="stylesheet" href="/assets/css/darkmode.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+  
+  <script src="/assets/js/utils.js" defer></script>
+  <script src="/assets/js/theme.js" defer></script>
+  <script src="/assets/js/loader.js" defer></script>
+  <script src="/assets/js/profile.js" defer></script>
+  <style>
+    .editable-avatar-container:hover .avatar-overlay {
+      opacity: 1 !important;
+    }
+    .editable-avatar-container:hover #prof-avatar {
+      transform: scale(1.04);
+      border-color: var(--gold) !important;
+    }
+  </style>
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+
+<section class="page active" id="page-profile">
+  <div class="page-head" style="padding-bottom: 0;">
+    <div class="kicker">student dashboard</div>
+    <h1>Innovator Profile</h1>
+    <p>Manage your uploaded scrapbook moments and Hall of Fame recognition entries.</p>
+    <div class="filmstrip"><span></span><span></span><span></span></div>
+  </div>
+
+  <div class="formContainer" style="max-width: 800px; margin-top: 30px; display: grid; grid-template-columns: 240px 1fr; gap: 30px;">
+    <div class="tapeTop"></div>
+    
+    <!-- Left Column: User details -->
+    <div style="border-right: 1px dashed var(--line); padding-right: 24px; text-align: center;">
+      <!-- Editable Avatar Container -->
+      <div class="editable-avatar-container" style="position: relative; width: 110px; height: 110px; margin: 0 auto 16px; border-radius: 50%; cursor: pointer; overflow: hidden;" onclick="triggerProfileImageUpload()">
+        <img id="prof-avatar" src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&h=150" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 2px solid var(--kraft); transition: all 0.25s ease;" alt="User Profile Image">
+        <div class="avatar-overlay" style="position: absolute; inset: 0; background: rgba(0,0,0,0.5); border-radius: 50%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; font-size: 11px; opacity: 0; transition: opacity 0.25s ease; border: 2px solid var(--gold);">
+          <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom: 2px;">
+            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+            <circle cx="12" cy="13" r="4"></circle>
+          </svg>
+          <span style="font-weight: 500; font-family: 'Work Sans', sans-serif;">Edit Photo</span>
+        </div>
+        <input type="file" id="profile-image-input" accept="image/*" style="display: none;" onchange="handleProfileImageSelect(event)">
+      </div>
+      <h3 id="prof-name" style="margin: 0 0 4px; font-size: 20px; font-weight: 600;">Alex Student</h3>
+      <span id="prof-role" style="font-size: 13px; color: var(--kraft); display: block; margin-bottom: 12px; font-weight: 500;">Innovator Student</span>
+      <span id="prof-email" style="font-size: 12.5px; color: var(--ink-soft); word-break: break-all;">student@pwioi.com</span>
+      
+      <div style="margin-top: 30px; border-top: 1px dashed var(--line); padding-top: 20px; display: flex; justify-content: space-around;">
+        <div>
+          <div id="stat-memories-count" style="font-family: 'Fraunces', serif; font-size: 28px; font-weight: 700; color: var(--kraft);">0</div>
+          <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--ink-soft);">Memories</div>
+        </div>
+        <div>
+          <div id="stat-achievements-count" style="font-family: 'Fraunces', serif; font-size: 28px; font-weight: 700; color: var(--gold-deep);">0</div>
+          <div style="font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--ink-soft);">Awards</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Column: List of uploads -->
+    <div>
+      <h4 class="serif" style="font-size: 20px; margin-top: 0; margin-bottom: 15px; color: var(--kraft);">Your Scrapbook Uploads</h4>
+      <div id="user-uploaded-memories" style="margin-bottom: 30px; max-height: 240px; overflow-y: auto; padding-right: 6px;">
+        <!-- Loaded dynamically -->
+      </div>
+
+      <h4 class="serif" style="font-size: 20px; margin-top: 0; margin-bottom: 15px; color: var(--gold-deep);">Your Hall of Fame Contributions</h4>
+      <div id="user-uploaded-achievements" style="max-height: 240px; overflow-y: auto; padding-right: 6px;">
+        <!-- Loaded dynamically -->
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Dedicated Special Section -->
+  <div id="special-section" style="margin-top: 60px; border-top: 1px dashed var(--line); padding-top: 40px; scroll-margin-top: 100px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; flex-wrap: wrap; gap: 15px;">
+      <div>
+        <div class="kicker" style="color: var(--gold-deep); font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 600;">handpicked collections</div>
+        <h2 class="serif" style="font-size: 28px; margin: 4px 0 0; color: var(--kraft);">Special Moments</h2>
+      </div>
+      <!-- Tab Controls -->
+      <div class="special-tabs" style="display: flex; gap: 6px; background: var(--bg-alt); padding: 4px; border-radius: 999px; border: 1px dashed var(--line);">
+        <button class="tab-btn" onclick="switchSpecialTab('photos')" id="tab-special-photos" style="background: var(--kraft); color: var(--bg); border: none; padding: 6px 16px; border-radius: 999px; font-weight: 600; font-family: 'Work Sans', sans-serif; font-size: 12px; cursor: pointer; transition: all 0.25s;">Photos (0)</button>
+        <button class="tab-btn" onclick="switchSpecialTab('videos')" id="tab-special-videos" style="background: transparent; color: var(--ink-soft); border: none; padding: 6px 16px; border-radius: 999px; font-weight: 600; font-family: 'Work Sans', sans-serif; font-size: 12px; cursor: pointer; transition: all 0.25s;">Videos (0)</button>
+      </div>
+    </div>
+
+    <!-- Photos Grid -->
+    <div id="special-photos-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 24px;">
+      <!-- Loaded dynamically -->
+    </div>
+
+    <!-- Videos Grid (hidden by default) -->
+    <div id="special-videos-grid" style="display: none; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 24px;">
+      <!-- Loaded dynamically -->
+    </div>
+  </div>
+
+</section>
+
+<div id="footer-placeholder"></div>
+
+</body>
+</html>

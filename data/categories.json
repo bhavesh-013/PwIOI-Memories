@@ -1,0 +1,10 @@
+[
+  {"id": "freshers", "name": "Freshers"},
+  {"id": "hackathon", "name": "Hackathon"},
+  {"id": "farewell", "name": "Farewell"},
+  {"id": "sports", "name": "Sports"},
+  {"id": "industrial", "name": "Industrial Visit"},
+  {"id": "cultural", "name": "Cultural Fest"},
+  {"id": "convocation", "name": "Convocation"},
+  {"id": "trips", "name": "Trips"}
+]

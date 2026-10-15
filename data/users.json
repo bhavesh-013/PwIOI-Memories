@@ -1,0 +1,14 @@
+[
+  {
+    "email": "student@pwioi.com",
+    "password": "password123",
+    "name": "Alex Student",
+    "role": "2nd Year Student"
+  },
+  {
+    "email": "meena@pwioi.com",
+    "password": "password123",
+    "name": "Meena Kumawat",
+    "role": "3rd Year Student"
+  }
+]

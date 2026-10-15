@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PWIOI Memories - Memory Gallery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500&family=Work+Sans:wght@300;400;500;600&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/assets/css/variables.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="/assets/css/navbar.css">
+  <link rel="stylesheet" href="/assets/css/hero.css">
+  <link rel="stylesheet" href="/assets/css/cards.css">
+  <link rel="stylesheet" href="/assets/css/gallery.css">
+  <link rel="stylesheet" href="/assets/css/forms.css">
+  <link rel="stylesheet" href="/assets/css/animations.css">
+  <link rel="stylesheet" href="/assets/css/darkmode.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+  
+  <script src="/assets/js/utils.js" defer></script>
+  <script src="/assets/js/theme.js" defer></script>
+  <script src="/assets/js/loader.js" defer></script>
+  <script src="/assets/js/gallery.js" defer></script>
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+
+<section class="page active" id="page-memory-detail">
+  <div class="detailHero" id="detailHeroBg">
+    <div class="detailHeroOverlay"></div>
+    <div class="heroTop">
+      <button class="backBtn" onclick="window.location.href='/memories.html'">← All memories</button>
+      <div class="heroActions">
+        <button onclick="downloadHero()">⬇ Download</button>
+        <button onclick="shareMemory()">↗ Share</button>
+      </div>
+    </div>
+    <div class="heroText">
+      <span class="heroCat" id="detailCat"></span>
+      <h1 id="detailTitle"></h1>
+      <div class="heroMeta" id="detailMeta"></div>
+    </div>
+  </div>
+  <div class="detailBody">
+    <p class="detailStory" id="detailStory"></p>
+    <div class="editorialGallery" id="editorialGallery"></div>
+    <div class="videoSection">
+      <h3>Videos from this event</h3>
+      <div class="videoGrid" id="videoGrid"></div>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+</body>
+</html>
